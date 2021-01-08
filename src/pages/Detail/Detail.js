@@ -1,19 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Detail.css";
+import { Link } from "react-router-dom";
 
 const Detail = () => (
 	<div>
+		<Link to="/">Back</Link>
 		<div class="w3-row-padding w3-padding-16" id="about">
 			<div class="w3-col m6">
-				<img src="/w3images/avatar_g.jpg" alt="Me" style="width:100%" />
+				<img
+					src="/w3images/avatar_g.jpg"
+					alt="Me"
+					style={{ width: 100 + "%" }}
+				/>
 			</div>
 			<div class="w3-col m6">
-				<img src="/w3images/me2.jpg" alt="Me" style="width:100%" />
+				<img
+					src="/w3images/me2.jpg"
+					alt="Me"
+					style={{ width: 100 + "%" }}
+				/>
 			</div>
 		</div>
 
-		<div class="w3-container w3-padding-large" style="margin-bottom:32px">
+		<div
+			class="w3-container w3-padding-large"
+			style={{ marginBottom: 32 + "px" }}
+		>
 			<h4>
 				<b>About Me</b>
 			</h4>
