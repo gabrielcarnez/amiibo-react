@@ -1,0 +1,24 @@
+{
+	"name": "Amibo Smile",
+	"subTitle": "An engine to search and find amiibos",
+	"description": "The objetive of this app is apply new technologie, learn sometihing new and practice, nothing more. <br /> You can find the code of this project <a target='_blank' rel='noopener noreferrer' href='https://github.com/gabrielcarnez/amiibo-react'>here</a>, you can make suggetions o propous new functionalitis ( why not? ).<br />Thanks!",
+	"personal": [
+		{
+			"text": "Gabriel carnez",
+			"link": "https://www.gabrielcarnez.com.ar/"
+		},
+		{
+			"text": "Linkedin",
+			"link": "https://www.linkedin.com/in/gabriel-david-carnez/"
+		},
+		{ "text": "Github", "link": "https://github.com/gabrielcarnez/" }
+	],
+	"madeWith": [
+		{ "text": "Amiiboapi", "link": "https://www.amiiboapi.com/" },
+		{ "text": "W3css", "link": "https://www.w3schools.com/w3css/" },
+		{
+			"text": "React & different libraries (axios, router, etc)",
+			"link": "https://reactjs.org/"
+		}
+	]
+}
