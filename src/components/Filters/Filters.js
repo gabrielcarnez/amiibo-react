@@ -17,7 +17,6 @@ const Filters = () => {
 	};
 
 	const setFavorite = (e) => {
-		console.log(e.target.checked);
 		dispatch(favorite(e.target.checked));
 		if (page !== 1) dispatch(setActivePage(1));
 	};

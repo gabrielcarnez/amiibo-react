@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import FullDetail from "../../components/FullDetail/FullDetail";
 const Detail = (props) => {
 	const { amiibo, position } = props;
-	console.log(amiibo)
 	return (
 		<div>
 			<FullDetail data={{ ...amiibo, position }} />
