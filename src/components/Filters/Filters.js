@@ -29,7 +29,7 @@ const Filters = () => {
 					<InputSearch event={setSearch}/>
 				</small>
 				<small className="header-search input-filter">
-					<label className="input-filter">Favorites</label>
+					<label className="input-filter">My favorites</label>
 					<InputCheck event={setFavorite}/>
 				</small>
 			</div>
