@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 //router
@@ -6,10 +7,21 @@ import { Provider } from "react-redux";
 import store from "./store/store";
 import Index from "./pages/Index/Index";
 import Detail from "./pages/Detail/Detail";
-import contact from "./text-data.json";
+import Axios from "axios";
 
 function App() {
-  const { madeWith, personal, description, name, subTitle } = contact;
+  const [texts, setTexts] = useState(null);
+
+  useEffect(() => {
+    async function getTexts() {
+      const texts = await Axios.get("./text-data.json");
+      const { data } = texts;
+      setTexts(data);
+    }
+    getTexts();
+  }, []);
+
+  const { madeWith, personal, description, name, subTitle } = texts || {};
   return (
     <Provider store={store}>
       <Router basename={"/amiibo-react"}>
