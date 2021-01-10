@@ -1,71 +1,52 @@
 import React from "react";
-import PropTypes from "prop-types";
+import LinkList from "../LinkList/LinkList";
 import "./Footer.css";
 
-const Footer = () => (
-  <footer class="w3-container w3-padding-32 w3-dark-grey">
-    <div class="w3-row-padding">
-      <div class="w3-third">
-        <h3>FOOTER</h3>
+const Footer = () => {
+  const contact = [
+    { text: "Gabriel carnez", link: "https://www.gabrielcarnez.com.ar/" },
+    { text: "Linkeding", link: "www.linkedin.com/in/gabriel-david-carnez" },
+    { text: "Github", link: "https://github.com/gabrielcarnez/" },
+  ];
+  const madeWith = [
+    { text: "Amiiboapi", link: "https://www.amiiboapi.com/" },
+    { text: "W3css", link: "https://www.w3schools.com/w3css/" },
+    { text: "React and diferent libraries)", link: "https://reactjs.org/" },
+  ];
+
+  return (
+    <footer className="Footer w3-container w3-padding-32 w3-dark-grey">
+      <div className="w3-row-padding">
+        <div className="w3-third">
+          <h3>Amigo Smile</h3>
+          <small>
+            The objetive of this app is apply new technologie, learn sometihing
+            new and practice, nothing more. <br />
+            You can find the code of this project in this{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/gabrielcarnez/amiibo-react"
+            >
+              link
+            </a>
+            , you can make suggetions o propous new functionalitis ( why not? ).
+            <br />
+            Thanks!
+          </small>
+        </div>
+
+        <div className="w3-third">
+          <LinkList title="Made with..." list={madeWith} />
+        </div>
+
+        <div className="w3-third">
+          <h3></h3>
+          <LinkList title="Contact:" list={contact} />
+        </div>
       </div>
-
-      <div class="w3-third">
-        <h3>BLOG POSTS</h3>
-        <ul class="w3-ul w3-hoverable">
-          <li class="w3-padding-16">
-            <img
-              src="/w3images/workshop.jpg"
-              class="w3-left w3-margin-right"
-              
-            />
-            <span class="w3-large">Lorem</span>
-            <span>Sed mattis nunc</span>
-          </li>
-          <li class="w3-padding-16">
-            <img
-              src="/w3images/gondol.jpg"
-              class="w3-left w3-margin-right"
-              
-            />
-            <span class="w3-large">Ipsum</span>
-            <span>Praes tinci sed</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w3-third">
-        <h3>POPULAR TAGS</h3>
-        <p>
-          <span class="w3-tag w3-black w3-margin-bottom">Travel</span>{" "}
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span>{" "}
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">
-            IKEA
-          </span>{" "}
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span>{" "}
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">
-            Ideas
-          </span>{" "}
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span>{" "}
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">
-            News
-          </span>{" "}
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span>{" "}
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">
-            Sports
-          </span>{" "}
-          <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
-        </p>
-      </div>
-    </div>
-  </footer>
-);
-
-Footer.propTypes = {};
-
-Footer.defaultProps = {};
+    </footer>
+  );
+};
 
 export default Footer;

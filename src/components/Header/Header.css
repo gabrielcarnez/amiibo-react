@@ -1,1 +1,14 @@
-.Header {}
+.Header {
+	background-color: #E4000F !important;
+	color:white;
+	margin-bottom: 20px
+}
+
+.w3-bottombar-header {
+    border-bottom: 6px solid #f00!important;
+   }
+
+.header-search {
+	font-size: 20px
+}
+

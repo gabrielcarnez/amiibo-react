@@ -1,51 +1,37 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Detail.css";
-import { Link } from "react-router-dom";
-
-const Detail = () => (
-	<div>
-		<Link to="/">Back</Link>
-		<div class="w3-row-padding w3-padding-16" id="about">
-			<div class="w3-col m6">
-				<img
-					src="/w3images/avatar_g.jpg"
-					alt="Me"
-					style={{ width: 100 + "%" }}
-				/>
-			</div>
-			<div class="w3-col m6">
-				<img
-					src="/w3images/me2.jpg"
-					alt="Me"
-					style={{ width: 100 + "%" }}
-				/>
-			</div>
+import { connect } from "react-redux";
+import FullDetail from "../../components/FullDetail/FullDetail";
+const Detail = (props) => {
+	const { amiibo, position } = props;
+	return (
+		<div>
+			<FullDetail data={{ ...amiibo, position }} />
 		</div>
+	);
+};
 
-		<div
-			class="w3-container w3-padding-large"
-			style={{ marginBottom: 32 + "px" }}
-		>
-			<h4>
-				<b>About Me</b>
-			</h4>
-			<p>
-				Just me, myself and I, exploring the universe of unknownment. I
-				have a heart of love and an interest of lorem ipsum and mauris
-				neque quam blog. I want to share my world with you. Praesent
-				tincidunt sed tellus ut rutrum. Sed vitae justo condimentum,
-				porta lectus vitae, ultricies congue gravida diam non fringilla.
-				Praesent tincidunt sed tellus ut rutrum. Sed vitae justo
-				condimentum, porta lectus vitae, ultricies congue gravida diam
-				non fringilla.
-			</p>
-		</div>
-	</div>
-);
-
-Detail.propTypes = {};
+Detail.propTypes = {
+	amiibo: PropTypes.shape({
+		amiiboSeries: PropTypes.string,
+		character: PropTypes.string,
+		gameSeries: PropTypes.string,
+		head: PropTypes.string,
+		image: PropTypes.string,
+		name: PropTypes.string,
+		tail: PropTypes.string,
+		type: PropTypes.string,
+		favorite: PropTypes.bool,
+	}),
+	position: PropTypes.number,
+};
 
 Detail.defaultProps = {};
 
-export default Detail;
+const mapStateToProps = (state, ownProps) => ({
+	amiibo: state.fetchAmiibos.data[ownProps.match.params.id],
+	position: parseInt(ownProps.match.params.id),
+});
+
+export default connect(mapStateToProps)(Detail);

@@ -1,1 +1,5 @@
-.Footer {}
+.Footer {
+	background-color: #E4000F !important;
+	color:white;
+	margin-bottom: 20px
+}

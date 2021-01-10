@@ -1,15 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './Error.css';
 
 const Error = () => (
   <div className="Error" data-testid="Error">
-    Error Component
+    An error ocurent!
   </div>
 );
-
-Error.propTypes = {};
-
-Error.defaultProps = {};
-
 export default Error;

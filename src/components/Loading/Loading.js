@@ -1,15 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './Loading.css';
+import React from "react";
+import "./Loading.css";
 
-const Loading = () => (
-  <div className="Loading" data-testid="Loading">
-    Loading Component
-  </div>
-);
-
-Loading.propTypes = {};
-
-Loading.defaultProps = {};
+const Loading = () => <div className="loader">Loading...</div>;
 
 export default Loading;

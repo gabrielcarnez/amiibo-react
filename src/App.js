@@ -9,7 +9,6 @@ import Index from "./pages/Index/Index";
 import Detail from "./pages/Detail/Detail";
 
 function App() {
-  console.log(store.getState())
   return (
     <Provider store={store}>
       <Router basename={"/amiibo-react"}>
@@ -19,9 +18,8 @@ function App() {
             <Route exact path="/">
               <Index />
             </Route>
-            <Route exact path="/detail/:id">
-              <Detail />
-            </Route>
+            <Route exact path="/detail/:id" component = {Detail} />
+              
           </Switch>
           <Footer />
         </div>

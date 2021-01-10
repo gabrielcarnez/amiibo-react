@@ -5,24 +5,22 @@ import "./Card.css";
 import { Link } from "react-router-dom";
 
 const Card = (props) => {
-	const { data } = props;
-	const { amiiboSeries, character, gameSeries, name, release, type } = data;
+	const { data, position } = props;
+	const { image, name, favorite } = data;
 
 	return (
-		<Link to={`detail/${props.id}`}>
-			<div class="w3-third w3-container w3-margin-bottom">
+		<Link to={`detail/${position}`}>
+			<div className="w3-third w3-container w3-margin-bottom content-card">
+				{favorite && <i className="fa fa-star"></i>}
 				<img
 					loading="lazy"
-					src={props.data.image}
+					src={image}
 					alt="Norway"
-					style={{ height: 200 + "px" }}
-					class="w3-hover-opacity"
+					className="w3-hover-opacity img-style"
 				></img>
-				<div class="w3-container w3-white">
-					<p>
-						<b>
-							{character} - {name} - {gameSeries}
-						</b>
+				<div className="w3-container w3-white">
+					<p className="text-card">
+						<b>{name}</b>
 					</p>
 				</div>
 			</div>
@@ -30,7 +28,14 @@ const Card = (props) => {
 	);
 };
 
-Card.propTypes = {};
+Card.propTypes = {
+	data: PropTypes.shape({
+		image: PropTypes.string,
+		name: PropTypes.string,
+		favorite: PropTypes.bool,
+	}),
+	position: PropTypes.number,
+};
 
 Card.defaultProps = {};
 
