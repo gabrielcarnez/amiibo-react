@@ -31,14 +31,13 @@ export const setFavorite = (index) => {
 	};
 };
 
-
 const fetchAmiboos = () => {
 	return (dispatch) => {
 		dispatch(fechAmiiboRequest());
 		Axios.get("https://amiiboapi.com/api/amiibo/")
 			.then((response) => {
-				const list = response.data.amiibo.map((a) => {
-					return { ...a, favorite: false };
+				const list = response.data.amiibo.map((a, index) => {
+					return { ...a, favorite: false, index };
 				});
 				dispatch(fechAmiiboSuccess(list));
 			})

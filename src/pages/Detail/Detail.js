@@ -30,7 +30,7 @@ Detail.propTypes = {
 Detail.defaultProps = {};
 
 const mapStateToProps = (state, ownProps) => ({
-	amiibo: state.fetchAmiibos.data[ownProps.match.params.id],
+	amiibo: state.fetchAmiibos.data.find(a => a.index == ownProps.match.params.id),
 	position: parseInt(ownProps.match.params.id),
 });
 

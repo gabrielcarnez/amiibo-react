@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 
 const Card = (props) => {
 	const { data, position } = props;
-	const { image, name, favorite } = data;
+	const { image, name, favorite, index } = data;
 
 	return (
-		<Link to={`detail/${position}`}>
+		<Link to={`detail/${index}`}>
 			<div className="w3-third w3-container w3-margin-bottom content-card">
 				{favorite && <i className="fa fa-star"></i>}
 				<img
@@ -33,6 +33,7 @@ Card.propTypes = {
 		image: PropTypes.string,
 		name: PropTypes.string,
 		favorite: PropTypes.bool,
+		index: PropTypes.number,
 	}),
 	position: PropTypes.number,
 };
