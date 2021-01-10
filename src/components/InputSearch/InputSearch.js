@@ -3,20 +3,22 @@ import PropTypes from "prop-types";
 import "./InputSearch.css";
 
 const InputSearch = (props) => {
-	const { event } = props;
+	const { event, value } = props;
 	return (
 		<input
-			onKeyUp={event}
+			onChange={event}
 			type="text"
 			name="input-search"
 			className="input-search"
 			placeholder="Mario"
+			value={value}
 		/>
 	);
 };
 
 InputSearch.propTypes = {
 	event: PropTypes.func,
+	value: PropTypes.string,
 };
 
 InputSearch.defaultProps = {};

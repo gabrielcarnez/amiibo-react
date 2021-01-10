@@ -10,6 +10,7 @@ import { setActivePage } from "../../store/actions/page";
 const Filters = () => {
 	const dispatch = useDispatch();
 	const { page } = useSelector((state) => state.page);
+	const { text, favorites } = useSelector((state) => state.filters);
 
 	const setSearch = (e) => {
 		dispatch(inputSearch(e.target.value));
@@ -26,17 +27,16 @@ const Filters = () => {
 			<div className="w3-col w3-center"></div>
 			<div className="w3-col w3-center">
 				<small className="header-search">
-					<InputSearch event={setSearch}/>
+					<InputSearch event={setSearch} value={text} />
 				</small>
 				<small className="header-search input-filter">
 					<label className="input-filter">My favorites</label>
-					<InputCheck event={setFavorite}/>
+					<InputCheck event={setFavorite} checked={favorites} />
 				</small>
 			</div>
 			<div className="w3-col w3-center"></div>
 		</div>
 	);
 };
-
 
 export default Filters;

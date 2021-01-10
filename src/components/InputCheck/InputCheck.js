@@ -3,12 +3,13 @@ import PropTypes from "prop-types";
 import "./InputCheck.css";
 
 const InputCheck = (props) => {
-	const { event } = props;
+	const { event, checked } = props;
 	return (
 		<input
 			onChange={event}
 			type="checkbox"
 			name="input-search"
+			checked={checked}
 			className="input-search"
 			placeholder="Mario"
 		/>
@@ -17,6 +18,7 @@ const InputCheck = (props) => {
 
 InputCheck.propTypes = {
 	event: PropTypes.func,
+	checked: PropTypes.bool,
 };
 
 InputCheck.defaultProps = {};
