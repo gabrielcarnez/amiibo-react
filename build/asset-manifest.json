@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/amiibo-react/static/css/main.4171ec57.chunk.css",
+    "main.js": "/amiibo-react/static/js/main.ff659b29.chunk.js",
+    "main.js.map": "/amiibo-react/static/js/main.ff659b29.chunk.js.map",
+    "runtime-main.js": "/amiibo-react/static/js/runtime-main.e16b989f.js",
+    "runtime-main.js.map": "/amiibo-react/static/js/runtime-main.e16b989f.js.map",
+    "static/js/2.05ba145d.chunk.js": "/amiibo-react/static/js/2.05ba145d.chunk.js",
+    "static/js/2.05ba145d.chunk.js.map": "/amiibo-react/static/js/2.05ba145d.chunk.js.map",
+    "static/js/3.4264d8ac.chunk.js": "/amiibo-react/static/js/3.4264d8ac.chunk.js",
+    "static/js/3.4264d8ac.chunk.js.map": "/amiibo-react/static/js/3.4264d8ac.chunk.js.map",
+    "index.html": "/amiibo-react/index.html",
+    "static/css/main.4171ec57.chunk.css.map": "/amiibo-react/static/css/main.4171ec57.chunk.css.map",
+    "static/js/2.05ba145d.chunk.js.LICENSE.txt": "/amiibo-react/static/js/2.05ba145d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e16b989f.js",
+    "static/js/2.05ba145d.chunk.js",
+    "static/css/main.4171ec57.chunk.css",
+    "static/js/main.ff659b29.chunk.js"
+  ]
+}
