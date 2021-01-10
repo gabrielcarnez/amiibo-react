@@ -12,7 +12,7 @@ const Header = (props) => {
 			<div className="w3-container">
 				<h1>
 					<b>Amiibo Smile</b><br />
-					<small class="description-header">An engine to search and find amiibos</small>
+					<small className="description-header">An engine to search and find amiibos</small>
 				</h1>
 				<div className="w3-section w3-bottombar w3-padding-16 w3-bottombar-header"></div>
 				{isExact && <Filters />}
