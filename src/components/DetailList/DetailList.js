@@ -15,6 +15,7 @@ const DetailList = (props) => {
 		release,
 		position,
 	} = props;
+
 	const [isFavourite, updateFavorite] = useState(favorite);
 	return (
 		<div
@@ -34,7 +35,7 @@ const DetailList = (props) => {
 							: "icon-fav fa fa-star-o"
 					}
 				></i>{" "}
-				<b>{name}</b>
+				<b>{name}-{favorite}</b>
 			</h2>
 			<ul>
 				<li>Amiibo Series: {amiiboSeries}</li>

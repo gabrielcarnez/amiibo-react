@@ -14,6 +14,7 @@ const FullDetail = (props) => {
 		release,
 		type,
 		position,
+		favorite,
 	} = data;
 	return (
 		<div className="w3-row-padding w3-padding-16" id="about">
@@ -30,6 +31,7 @@ const FullDetail = (props) => {
 						release,
 						type,
 						position,
+						favorite
 					}}
 				/>
 			</div>
