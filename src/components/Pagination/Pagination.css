@@ -1,0 +1,14 @@
+.Pagination {}
+
+.w3-red{
+	background-color: #E4000F !important;
+	color:white;
+}
+
+.w3-red:hover{
+	background-color: #E4000F !important;
+}
+
+.link-page:hover{
+	cursor: pointer;
+}
