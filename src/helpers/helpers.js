@@ -49,6 +49,13 @@ const checkItem = (store, item) => {
 	return _st.find((i) => JSON.stringify(item) === JSON.stringify(i));
 };
 
+const removeItem = (store, item) => {
+	let _st = getStore(store);
+	_st = _st.filter((i) => JSON.stringify(item) !== JSON.stringify(i));
+	localStorage.setItem(store, JSON.stringify(_st));
+	return _st;
+};
+
 export const Store = {
 	checkStore,
 	createStore,
@@ -56,4 +63,5 @@ export const Store = {
 	setItem,
 	initStore,
 	checkItem,
+	removeItem,
 };

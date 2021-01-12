@@ -1,6 +1,4 @@
 import Axios from "axios";
-import { Store } from "../../helpers/helpers";
-import store from "../store";
 export const FETCH_AMIIBO_REQUEST = "FETCH_AMIIBO_REQUEST";
 export const FETCH_AMIIBO_SUCCESS = "FETCH_AMIIBO_SUCCESS";
 export const FETCH_AMIIBO_FAILURE = "FETCH_AMIIBO_FAILURE";
@@ -38,14 +36,7 @@ const fetchAmiboos = () => {
 		dispatch(fechAmiiboRequest());
 		Axios.get("https://amiiboapi.com/api/amiibo/")
 			.then((response) => {
-				const store = Store.initStore("amiibo-favorites");
-				const list = response.data.amiibo.map((a, index) => {
-					const favorite = Store.checkItem("amiibo-favorites", a)
-						? true
-						: false;
-					return { ...a, favorite: favorite, index };
-				});
-				dispatch(fechAmiiboSuccess(list));
+				dispatch(fechAmiiboSuccess(response.data.amiibo));
 			})
 			.catch((error) => {
 				dispatch(

@@ -20,9 +20,17 @@ const amiibo = (state = default_amiibo, action) => {
 				loading: true,
 			};
 		case FETCH_AMIIBO_SUCCESS:
+			Store.initStore("amiibo-favorites");
+			const list = action.payload.map((a, index) => {
+				const favorite = Store.checkItem("amiibo-favorites", a)
+					? true
+					: false;
+				return { ...a, favorite: favorite, index };
+			});
+
 			return {
 				...state,
-				data: action.payload,
+				data: list,
 				loading: false,
 				error: null,
 			};
@@ -39,7 +47,12 @@ const amiibo = (state = default_amiibo, action) => {
 			const _temp = Object.assign({}, state.data[action.payload]);
 			delete _temp["favorite"];
 			delete _temp["index"];
-			Store.setItem("amiibo-favorites", _temp);
+			console.log(Store)
+			if (state.data[action.payload].favorite) {
+				Store.setItem("amiibo-favorites", _temp);
+			} else {
+				Store.removeItem("amiibo-favorites", _temp);
+			}
 			return state;
 		default:
 			return state;
