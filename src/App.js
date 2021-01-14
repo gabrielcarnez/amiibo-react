@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Footer from "components/Footer/Footer";
 import Header from "components/Header/Header";
-//router
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "store/store";
